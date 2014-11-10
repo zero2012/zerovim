@@ -3,12 +3,12 @@ set rtp+=~/.vim/bundle/vundle/
 " 调用管理器
 call vundle#rc()
 
-""Bundle 'FuzzyFinder'
-" 插件目录
 " 插件管理器
 "Bundle 'zero2012/vundle'
-" 插件管理器
-Bundle '自动补全的一款工具'
+""Bundle 'FuzzyFinder'
+" 插件目录
+" 自动补全的一款工具
+Bundle 'zero2012/L9'
 " 左边树tree 
 Bundle 'zero2012/nerdtree.vim'
 " 对齐线
