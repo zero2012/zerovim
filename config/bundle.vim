@@ -3,46 +3,47 @@ set rtp+=~/.vim/bundle/vundle/
 " 调用管理器
 call vundle#rc()
 
-Bundle 'L9'
 ""Bundle 'FuzzyFinder'
 " 插件目录
-" 左边树tree 
-Bundle 'anscoral/nerdtree.vim'
-" 对齐线
-Bundle 'vim-scripts/indentLine.vim'
-" 打开历史目录 => ,,m 
-Bundle 'https://github.com/owner888/vimer/tree/master/bundle/mru.vim'
 " 插件管理器
-Bundle 'gmarik/vundle'
+"Bundle 'zero2012/vundle'
+" 插件管理器
+Bundle '自动补全的一款工具'
+" 左边树tree 
+Bundle 'zero2012/nerdtree.vim'
+" 对齐线
+Bundle 'zero2012/indentLine.vim'
+" 打开历史目录 => ,,m 
+Bundle 'zero2012/mru.vim'
 " 快捷补全
-Bundle 'vim-scripts/snipMate'
+Bundle 'zero2012/snipMate'
 " dict的补全 
-Bundle 'vim-scripts/Pydiction'
-"重写过了，不用在更新
-Bundle 'vim-scripts/php-doc' 
+Bundle 'zero2012/Pydiction.vim'
+"注释工具
+Bundle 'zero2012/php-doc.vim' 
 " 右边树, 显示函数列表等
-Bundle 'vim-scripts/taglist.vim'
+Bundle 'zero2012/taglist.vim'
 " 自动提示需要这2个插件, 并不用配置
 " tree家族出的多行注释
-Bundle 'vimscripts-song/nerdcommenter'
+Bundle 'zero2012/nerdcommenter'
 " c++的补全
-Bundle 'vim-scripts/OmniCppComplete'
+Bundle 'zero2012/OmniCppComplete'
 " 弹框插件
-Bundle 'vim-scripts/neocomplcache'
-" gdb vim调试工具, 据大神说很牛逼, 还不会用??????
-Bundle 'badeip/gdb.vim'
+Bundle 'zero2012/neocomplcache'
+" gdb vim调试工具
+Bundle 'zero2012/gdb.vim'
 " 文本对齐插件，你可以根据自己的喜欢来设置根据什么对齐比如=号
-Bundle 'godlygeek/tabular'
+Bundle 'zero2012/tabular'
 " java提示, 
-Bundle 'vim-scripts/javacomplete'
+Bundle 'zero2012/javacomplete'
 " 生成文本直接生成html，不 知道怎么用, 不过已经配了 
 Bundle 'plasticboy/vim-markdown'
 " html，xml等页面批量生成table等  
-Bundle 'mattn/emmet-vim'
+Bundle 'zero2012/emmet-vim'
 " 保存时语法检查, b不用配置
-Bundle 'scrooloose/syntastic'
+Bundle 'zero2012/syntastic'
 "格式化html及js代码
-Bundle 'lukaszb/vim-web-indent'
+"Bundle 'lukaszb/vim-web-indent'
 
 
 
