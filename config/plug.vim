@@ -1,5 +1,4 @@
 " 在使用bundle安装插件之前，需要先安装vundle插件
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " cscope setting
 " 生成文件列表 cscope.files
@@ -34,8 +33,6 @@ let g:NERDChristmasTree       = 1
 map <C-\> <plug>NERDCommenterToggle  " 给批量注释设置快捷键
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => markdown配置
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "autocmd VimEnter * NERDTree "启动Vim时自动打开nerdtree
 let g:NERDTreeWinPos          = "left"
 let g:NERDTreeWinSize         = 30
@@ -46,14 +43,6 @@ let g:NERDChristmasTree       = 1
 "let NERDTreeChDirMode        = 2 "打开书签时，自动将Vim的pwd设为打开的目录，如果你的项目有tags文件，你会发现这个命令很有帮助
 map <C-\> <plug>NERDCommenterToggle  " 给批量注释设置快捷键
 
-"markdown配置
-au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn}   set filetype=mkd
-au BufRead,BufNewFile *.{php}   set filetype=php
-au BufRead,BufNewFile *.{go}   set filetype=go
-au BufRead,BufNewFile *.{js}   set filetype=javascript
-"rkdown to HTML  
-nmap md :!~/.vim/markdown.pl % > %.html <CR><CR>
-nmap fi :!open %.html & <CR><CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => indentLine 对齐线插件
@@ -75,6 +64,14 @@ let g:snips_mail    = "512888425@qq.com"
 let g:snips_company = "(C)2012-2022 www.kkk5.com Inc."
 let g:snips_top     = "[3kwan开发框架]"
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => 判断文件类型
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+au BufRead,BufNewFile *.{php}   set filetype=php
+au BufRead,BufNewFile *.{go}   set filetype=go
+au BufRead,BufNewFile *.{js}   set filetype=javascript
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => autocmd 自动加载
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -93,7 +90,6 @@ autocmd BufNewFile *.html 0r ~/.vim/skeletons/tpl.skel
 autocmd BufNewFile *.tpl 0r ~/.vim/skeletons/tpl.skel
 autocmd BufNewFile *.json 0r ~/.vim/skeletons/json.skel
 autocmd BufNewFile *.java 0r ~/.vim/skeletons/java.skel
-
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

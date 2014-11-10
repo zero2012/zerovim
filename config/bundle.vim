@@ -5,8 +5,6 @@ call vundle#rc()
 
 " 插件管理器
 "Bundle 'zero2012/vundle'
-""Bundle 'FuzzyFinder'
-" 插件目录
 " 自动补全的一款工具
 Bundle 'zero2012/L9'
 " 左边树tree 
@@ -36,14 +34,10 @@ Bundle 'zero2012/gdb.vim'
 Bundle 'zero2012/tabular'
 " java提示, 
 Bundle 'zero2012/javacomplete'
-" 生成文本直接生成html，不 知道怎么用, 不过已经配了 
-Bundle 'plasticboy/vim-markdown'
 " html，xml等页面批量生成table等  
 Bundle 'zero2012/emmet-vim'
 " 保存时语法检查, b不用配置
 Bundle 'zero2012/syntastic'
-"格式化html及js代码
-"Bundle 'lukaszb/vim-web-indent'
 
 
 
