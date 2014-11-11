@@ -162,5 +162,9 @@ let g:neocomplcache_enable_auto_select = 1 "支持在下拉框自动选择第一
 " let g:neocomplcache_enable_caching_message=1 "显示启动进度
 
 " 17.跳过tpl，html 文件的语法检查，插件syntastic的配置
-let g:syntastic_ignore_files=['.*\.tpl$', '.*\.html$','.*\.htm$']
+let g:syntastic_ignore_files=['.*\.tpl$', '.*\.html$','.*\.htm$','.*\.go']
+
+"18 静态分析器 syntastic 错误标识
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '⚠'
 

@@ -38,7 +38,8 @@ Bundle 'zero2012/javacomplete'
 Bundle 'zero2012/emmet-vim'
 " 保存时语法检查, b不用配置
 Bundle 'zero2012/syntastic'
-
+"go语言语法高亮
+Bundle 'zero2012/vim-gocode'
 
 
 

@@ -86,5 +86,15 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
-
+"8 对 HTML 元素进行转义：< -> &lt;、> -> &gt;、& -> &amp;、空格 -> &nbsp;、行尾添加 <br />
+" 先后顺序敏感
+function HtmlEscape()
+    retab<CR>
+    silent s/&/\&amp;/eg
+    silent s/</\&lt;/eg
+    silent s/>/\&gt;/eg
+    silent s/ /\&nbsp;/eg
+    silent s/$/<br \/>/eg
+endfunction
+map <Leader>he :call HtmlEscape()<CR>
 
