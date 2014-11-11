@@ -45,7 +45,7 @@ set numberwidth=3                   " 行号宽度
 "set showcmd                        " 输入的命令显示出来，看的清楚些 ，win有用 
 set ruler                           " 显示标尺
 "set wildmenu                       " 使回格键（backspace）正常处理indent, eol, start等 win有用
-"set wildmode=list:longest,full     " 可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位）, win下有用
+set wildmode=list:longest,full      " 可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位）,并且显示命令模糊搜索, win下有用,
 set laststatus=2                    " 启动显示状态行(1),总是显示状态行(2) 
 "set mouse=a                        " 充许使用鼠标, 值对win有用
 "set mousehide						" 隐藏鼠标，当是文本的处于编辑的时候, win有用
