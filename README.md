@@ -8,7 +8,7 @@ zerovim
  ![image](https://github.com/zero2012/pics/blob/master/zerovim/pic_1.png)
 
 1、copy macvim程序到Applications 
-2、cp gvim  /usr/bin/
+
 
 
 
