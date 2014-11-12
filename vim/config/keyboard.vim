@@ -5,6 +5,8 @@ map <F4> :NERDTreeMirror<CR>gT<C-w>w<ESC>gt<C-w>w    " 新标签打开一个文�
 "nmap <Leader>f :NERDTreeToggle<CR>
 "nmap <Leader>F :NERDTreeFind<CR>
 "nmap <Leader>s :NERDTreeMirror<CR>
+" 清除高亮并且重绘屏幕
+map <F6> :nohlsearch<CR>
 
 " map php-doc key inoremap:插入模式 nnoremap:命令行模式 vnoremap:视图模式
 inoremap <C-P> <ESC> :call PhpDocSingle()<CR>i
@@ -13,8 +15,6 @@ vnoremap <C-P> :call PhpDocSingle()<CR>
 
 " 去掉windows下编辑器产生的 ^M
 noremap  <C-M> :%s/<C-V><cr>//ge<cr>'tzt'm  
-" 清除高亮并且重绘屏幕
-nnoremap <C-L> :nohlsearch<CR><C-L>
 
 cmap W w
 cmap Q q

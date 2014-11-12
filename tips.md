@@ -12,7 +12,7 @@
     - <code>&lt;C-P&gt;</code>:  函数注释
     - <code>&lt;C-\&gt;</code>:  代码注释
     - <code>&lt;C-m&gt;</code>:  去掉windows下编辑器产生的 ^M
-    - <code>&lt;Leader&gt;&lt;Leader&gt;m</code>:   MRU,打开历史操作的文件
+    - <code>&lt;Leader&gt;&lt;Leader&gt;m</code>:   MRU,最近打开的文件
 
 * svn插件操作
     - <code>&lt;Leader&gt;sd</code>:   比较文件
@@ -49,8 +49,26 @@
 
 ### 插件列表
 
-插件介绍请 Google
+插件详细介绍请 Google
 
-
-
-
+* L9 library库  : 很多补全插件都依懒它
+* nerdtree      : 左边树tree
+* indentLine    : 代码缩进对齐线
+* mru           : 记录最近打开的文件
+* snipMate      : 快捷补全
+* Pydiction     : python语言补全
+* php-doc       : 注释工具
+* tagbar        : 右边树,显示函数列表等
+* nerdcommenter : tree家族出的多行注释
+* OmniCppComplete : 一款很牛逼的补全工具
+* neocomplcache : 弹框插件
+* gdb : 调试工具
+* tabular : 文本对齐插件,你可以根据自己的喜欢来设置根据什么对齐比如=号
+* javacomplete  : java补全
+* emmet-vim     : 替换zen coding的神器,写html超快
+* syntastic     : 语法检查工具
+* vim-gocode    : go语言语法高亮
+* DrawIt.vim    : ASCII art 风格的注释
+* EasyGrep      : 取代grep的搜索神器
+* vcscommand    : svn插件
+* txt           : txt文本高亮
