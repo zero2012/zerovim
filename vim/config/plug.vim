@@ -71,6 +71,8 @@ au FileType html,htm,smarty let g:javascript_enable_domhtmlcss = 1
 au Filetype java setlocal omnifunc=javacomplete#Complete
 " vim无法认出json，遇到json后缀的，告诉一下vim这个是json
 au BufRead,BufNewFile *.json set filetype=json
+"txt文件高亮
+au BufRead,BufNewFile *.txt set filetype=txt
 
 " 新建文件模板, 创建一个skeletons目录
 autocmd BufNewFile *.php 0r ~/.vim/skeletons/php.skel
@@ -79,8 +81,6 @@ autocmd BufNewFile *.html 0r ~/.vim/skeletons/tpl.skel
 autocmd BufNewFile *.tpl 0r ~/.vim/skeletons/tpl.skel
 autocmd BufNewFile *.json 0r ~/.vim/skeletons/json.skel
 autocmd BufNewFile *.java 0r ~/.vim/skeletons/java.skel
-
-
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
