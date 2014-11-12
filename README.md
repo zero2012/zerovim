@@ -12,5 +12,13 @@ zerovim
 - 5. cd ~/Downloads/zerovim-master
 - 6. cp  OS\ X/gvim  /usr/bin/
 
+#二:运行install.sh脚本配置Macvim
 
+- chomd +x install.sh
+- 打开vim并执行bundle程序`:BundleInstall`
+- 重新打开vim即可看到效果
+
+### 了解更多vim使用的小技巧：
+
+[tips.md](tips.md)
 
