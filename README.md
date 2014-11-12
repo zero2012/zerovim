@@ -9,7 +9,7 @@ zerovim
 
 #一:安装Macvim
 
-- 1. 点击下载 https://codeload.github.com/zero2012/zerovim/zip/master 或 clone zerovim程序：https://github.com/zero2012/zerovim.git  ~/Downloads
+- 1. 点击下载 https://codeload.github.com/zero2012/zerovim/zip/master 或 clone zerovim程序：cd ~/Downloads && git clone git://github.com/zero2012/zerovim.git 
 - 2. 解压目录后有OS X的目录，里面有Macvim,gvim两个程序,Macvim是OS X系统gui、gvim是终端下面启动Macvim的命令脚本
 - 3. 把Macvim复制到Applications
 - 4. 开启终端,进入Downloads目录
