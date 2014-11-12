@@ -7,21 +7,21 @@ call vundle#rc()
 "Bundle 'zero2012/vundle'
 " 自动补全的一款工具
 Bundle 'zero2012/L9'
-" 左边树tree 
+"左边树tree 
 Bundle 'zero2012/nerdtree.vim'
-" 对齐线
+"对齐线
 Bundle 'zero2012/indentLine.vim'
-" 打开历史目录 => ,,m 
+"打开历史目录 => ,,m 
 Bundle 'zero2012/mru.vim'
-" 快捷补全
+"快捷补全
 Bundle 'zero2012/snipMate'
-" dict的补全 
+"dict的补全 
 Bundle 'zero2012/Pydiction.vim'
 "注释工具
 Bundle 'zero2012/php-doc.vim' 
-" 右边树, 显示函数列表等
+"右边树, 显示函数列表等
 "Bundle 'zero2012/taglist.vim'
-" 右边树,比taglisg更强大，可按函数分类
+"右边树,比taglisg更强大，可按函数分类
 Bundle 'zero2012/tagbar'
 " 自动提示需要这2个插件, 并不用配置
 " tree家族出的多行注释
