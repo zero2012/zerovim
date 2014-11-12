@@ -57,7 +57,7 @@ set completeopt=menuone,longest     " 打开文件类型检测, 加了这句才�
 set nobackup                        " 禁止生成临时文件
 set noswapfile                      " do not create swap file, 简写 set nowb
 "set whichwrap+=<,>,h,l             " 当光标到达行尾或者行首时，继续移动转至下一行或者上一行, win有用
-set wildignore=.svn,.git,*.swp,*.bak,*~,*.o,*.a  " 用于目录插件NERD_tree上，打开目录忽略这些文件
+set wildignore=.svn,.git,.hg,*.swp,*.bak,*~,*.o,*.a  " 用于目录插件NERD_tree上，打开目录忽略这些文件
 set tags=tags;                      " 开启tags，方便自动提示,以及搜索,必开 ,因为taglist(左边的函数列表插件)用的到
 set bsdir=buffer                    " 用于目录插件上，打开目录为当前文件目录
 set autochdir                       " 用于目录插件上，比如taglist(函数列表插件)自动加载文件中的子目录（比如加载变量目录下面的所有变量）
