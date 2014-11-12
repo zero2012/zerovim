@@ -42,5 +42,4 @@
 
 
 * CommandLine 模式
-    <Ctrl>-a: 跳到命令行开始
-    <Ctrl>-e: 跳到命令行结束
+    - <code>:Tabularize /= </code>   在当前所选择的行查找＝(等号)对齐
