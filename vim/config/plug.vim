@@ -66,6 +66,7 @@ au BufRead,BufNewFile *.{js}   set filetype=javascript
 " 让html和smarty模板能调用字典
 au FileType html,htm,smarty setlocal dict+=~/.vim/dict/css.dict
 au FileType html,htm,smarty setlocal dict+=~/.vim/dict/javascript.dict
+au FileType javascript      setlocal dict+=~/.vim/dict/javascript.dict
 au FileType html,htm,smarty let g:javascript_enable_domhtmlcss = 1
 au Filetype java setlocal omnifunc=javacomplete#Complete
 " vim无法认出json，遇到json后缀的，告诉一下vim这个是json
