@@ -13,8 +13,9 @@ vnoremap <C-P> :call PhpDocSingle()<CR>
 
 " 去掉windows下编辑器产生的 ^M
 noremap  <C-M> :%s/<C-V><cr>//ge<cr>'tzt'm  
-" Shift+F12 删除所有行未尾空格
-" nmap <S-F12> :%s,/s/+$,,g
+" 清除高亮并且重绘屏幕
+nnoremap <C-L> :nohlsearch<CR><C-L>
+
 cmap W w
 cmap Q q
 " ,,m 打开MRU
