@@ -32,4 +32,3 @@ cp ./vimrc ~/.vimrc
 echo "done!" 
 ### finish install
 echo "install finished, enjoy yourself!"
-
