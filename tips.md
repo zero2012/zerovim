@@ -4,9 +4,9 @@
 
 * Normal 模式
 
-- <code>&lt;F2&gt;</code>:   打开 NERDTree目录树开关切换
-- <code>&lt;F3&gt;</code>:   tagbar函数列表开关切换
-- <code>&lt;F4&gt;</code>:    新标签打开一个文件，复制目录树
+ - <code>&lt;F2&gt;</code>:   打开 NERDTree目录树开关切换
+ - <code>&lt;F3&gt;</code>:   tagbar函数列表开关切换
+ - <code>&lt;F4&gt;</code>:    新标签打开一个文件，复制目录树
 
 <Ctrl>-l: 清除高亮并且重绘屏幕
 <Ctrl>-_: 分屏模式下当前窗口最大化
