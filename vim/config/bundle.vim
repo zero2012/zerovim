@@ -42,8 +42,11 @@ Bundle 'zero2012/emmet-vim'
 Bundle 'zero2012/syntastic'
 "go语言语法高亮
 Bundle 'zero2012/vim-gocode'
-
-
-
+"ASCII art 风格的注释
+Bundle 'zero2012/DrawIt.vim'
+"取代grep的搜索插件
+Bundle 'zero2012/EasyGrep'
+"svn插件
+Bundle 'zero2012/vcscommand'
 
 

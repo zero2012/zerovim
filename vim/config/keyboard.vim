@@ -51,14 +51,15 @@ function! ClosePair(char)
   endif
 endfunction
 
-
-" 3.Ctrl+S实现保存，如果未命名文件名会提示你选择保存路径和文件名，gui（gvim 命令）下有效, 且win才有效
-"map <silent> <C-S> :if expand("%") == ""<CR>:browse confirm w<CR>:else<CR>:confirm w<CR>:endif<CR>
-"map mm '.zz
-"map <silent> <leader>ske :call ToggleSketch()<CR>
-"map <silent> <leader>b :bn<cr>
-"map <silent> <leader>n :bp<cr>
-"nnoremap <C-TAB> :tabnext<CR>
+"3 EasyGrep 搜索插件
+"1 使用 Grep.vim 插件在工程内全局查找，设置快捷键。快捷键速记法：search in buffer
+nmap <Leader>vb :GrepBuffer -ir<CR><CR>
+"2 Grep的词在光标下,匹配所有。  <Leader>vv
+"3 Grep的词在光标下,匹配整个单词。 <Leader>vV
+"4 跟vv一样，但添加在现有的列表。  <Leader>va 
+"5 跟vV一样，但添加在现有的列表。  <Leader>vA 
+"6 执行全局搜索搜索出现在光标的这个词,并提示模式来替换它。<Leader>vr
+"7 选择文件搜索和设置grep选项。 <Leader>vo 
 
 " 4.批量替换快捷健 ,r
 map <expr> <leader>r Replace_Current_Word()<Space>
