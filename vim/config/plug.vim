@@ -72,7 +72,7 @@ au Filetype java setlocal omnifunc=javacomplete#Complete
 " vim无法认出json，遇到json后缀的，告诉一下vim这个是json
 au BufRead,BufNewFile *.json set filetype=json
 "txt文件高亮
-au BufRead,BufNewFile *.txt set filetype=txt
+au BufRead,BufNewFile *.txt,*.md set filetype=txt
 
 " 新建文件模板, 创建一个skeletons目录
 autocmd BufNewFile *.php 0r ~/.vim/skeletons/php.skel

@@ -38,7 +38,7 @@ Bundle 'zero2012/tabular'
 Bundle 'zero2012/javacomplete'
 " html，xml等页面批量生成table等  
 Bundle 'zero2012/emmet-vim'
-" 保存时语法检查, b不用配置
+" 保存时语法检查, 不用配置
 Bundle 'zero2012/syntastic'
 "go语言语法高亮
 Bundle 'zero2012/vim-gocode'
@@ -48,5 +48,6 @@ Bundle 'zero2012/DrawIt.vim'
 Bundle 'zero2012/EasyGrep'
 "svn插件
 Bundle 'zero2012/vcscommand'
-
+"txt文件高亮
+Bundle 'zero2012/txt.vim'
 
