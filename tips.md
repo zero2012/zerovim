@@ -3,16 +3,10 @@
 大部分自定义快捷键都在 <code>config/keyboard.vim</code> 中配置，<code>&lt;Leader&gt;</code> 键被映射为逗号 <code>,</code>
 
 * Normal 模式
-<<<<<<< Updated upstream
-   * <code>&lt;F2&gt;</code>:   打开 NERDTree目录树开关切换
-   * <code>&lt;F3&gt;</code>:   tagbar函数列表开关切换
-   * <code>&lt;F4&gt;</code>:    新标签打开一个文件，复制目录树
-=======
-      <code>&lt;F2&gt;</code>:   打开 NERDTree目录树开关切换
-    * <code>&lt;F3&gt;</code>:   tagbar函数列表开关切换
-    * <code>&lt;F4&gt;</code>:    新标签打开一个文件，复制目录树
->>>>>>> Stashed changes
 
+   - <code>&lt;F2&gt;</code>:   打开 NERDTree目录树开关切换
+   - <code>&lt;F3&gt;</code>:   tagbar函数列表开关切换
+   - <code>&lt;F4&gt;</code>:    新标签打开一个文件，复制目录树
 
 <Ctrl>-l: 清除高亮并且重绘屏幕
 <Ctrl>-_: 分屏模式下当前窗口最大化
