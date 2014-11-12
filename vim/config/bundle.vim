@@ -20,7 +20,9 @@ Bundle 'zero2012/Pydiction.vim'
 "注释工具
 Bundle 'zero2012/php-doc.vim' 
 " 右边树, 显示函数列表等
-Bundle 'zero2012/taglist.vim'
+"Bundle 'zero2012/taglist.vim'
+" 右边树,比taglisg更强大，可按函数分类
+Bundle 'zero2012/tagbar'
 " 自动提示需要这2个插件, 并不用配置
 " tree家族出的多行注释
 Bundle 'zero2012/nerdcommenter'

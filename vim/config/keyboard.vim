@@ -1,6 +1,7 @@
 map <F2> :NERDTreeToggle<CR>   " NERDTree目录树开关切换
-map <F3> :TlistToggle<CR>      " taglist标签列表开关切换
-map <F4> t :NERDTreeMirror<CR>gT<C-w>w<ESC>gt<C-w>w    " 新标签打开一个文件，复制目录树
+"map <F3> :TlistToggle<CR>      " taglist标签列表开关切换
+map <F3> :TagbarToggle<CR>      " tagbar标签列表开关切换
+map <F4> :NERDTreeMirror<CR>gT<C-w>w<ESC>gt<C-w>w    " 新标签打开一个文件，复制目录树
 "nmap <Leader>f :NERDTreeToggle<CR>
 "nmap <Leader>F :NERDTreeFind<CR>
 "nmap <Leader>s :NERDTreeMirror<CR>
