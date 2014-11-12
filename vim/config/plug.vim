@@ -27,22 +27,10 @@ let g:NERDTreeWinPos          = "left"
 let g:NERDTreeWinSize         = 30
 let g:NERDTreeShowLineNumbers = 0
 "let g:NERDTreeQuitOnOpen     = 1
-let g:NERDTreeMouseMode       = 1
+let g:NERDTreeMouseMode       = 2  "指定鼠标模式：1为双击打开，3为单击打开，2为目录为单击打开，文件双击打开
 let g:NERDChristmasTree       = 1
 "let NERDTreeChDirMode        = 2 "打开书签时，自动将Vim的pwd设为打开的目录，如果你的项目有tags文件，你会发现这个命令很有帮助
 map <C-\> <plug>NERDCommenterToggle  " 给批量注释设置快捷键
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"autocmd VimEnter * NERDTree "启动Vim时自动打开nerdtree
-let g:NERDTreeWinPos          = "left"
-let g:NERDTreeWinSize         = 30
-let g:NERDTreeShowLineNumbers = 0
-"let g:NERDTreeQuitOnOpen     = 1
-let g:NERDTreeMouseMode       = 1
-let g:NERDChristmasTree       = 1
-"let NERDTreeChDirMode        = 2 "打开书签时，自动将Vim的pwd设为打开的目录，如果你的项目有tags文件，你会发现这个命令很有帮助
-map <C-\> <plug>NERDCommenterToggle  " 给批量注释设置快捷键
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => indentLine 对齐线插件
