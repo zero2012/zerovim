@@ -38,8 +38,14 @@
     - <code>&lt;C-j&gt;</code>:   向上窗体移动
     - <code>&lt;C-k&gt;</code>:   向下窗体移动
     - <code>&lt;C-l&gt;</code>:   向右窗体移动
+
     
-
-
 * CommandLine 模式
     - <code>:Tabularize /= </code>   在当前所选择的行查找＝(等号)对齐
+
+
+
+## 插件
+
+### 插件列表
+
