@@ -22,8 +22,6 @@ Bundle 'vim-scripts/Tagbar'
 Bundle 'scrooloose/nerdcommenter'
 " c++的补全
 Bundle 'vim-scripts/OmniCppComplete'
-" 弹框插件
-Bundle 'vim-scripts/neocomplcache'
 " 文本对齐插件，你可以根据自己的喜欢来设置根据什么对齐比如=号
 Bundle 'vim-scripts/Tabular'
 " java提示, 
@@ -34,6 +32,8 @@ Bundle 'mattn/emmet-vim'
 Bundle 'vim-scripts/Syntastic'
 "txt文件高亮
 Bundle 'vim-scripts/txt.vim'
+" 弹框插件
+Bundle 'zero2012/neocomplcache'
 "go语言语法高亮
 Bundle 'zero2012/vim-gocode'
 "ASCII art 风格的注释
@@ -48,4 +48,3 @@ Bundle 'zero2012/snipMate'
 Bundle 'zero2012/php-doc.vim' 
 "代码美化
 Bundle 'zero2012/codebeautify'
-
