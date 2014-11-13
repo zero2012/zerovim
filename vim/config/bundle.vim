@@ -51,3 +51,4 @@ Bundle 'zero2012/vcscommand'
 "txt文件高亮
 Bundle 'zero2012/txt.vim'
 
+
