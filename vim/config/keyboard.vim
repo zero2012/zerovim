@@ -6,7 +6,7 @@ map <F4> :NERDTreeMirror<CR>gT<C-w>w<ESC>gt<C-w>w    " 新标签打开一个文�
 "nmap <Leader>F :NERDTreeFind<CR>
 "nmap <Leader>s :NERDTreeMirror<CR>
 " 清除高亮并且重绘屏幕
-map <F6> :nohlsearch<CR>
+map <F5> :nohlsearch<CR>
 
 " map php-doc key inoremap:插入模式 nnoremap:命令行模式 vnoremap:视图模式
 inoremap <C-P> <ESC> :call PhpDocSingle()<CR>i
@@ -101,3 +101,44 @@ function HtmlEscape()
 endfunction
 map <Leader>he :call HtmlEscape()<CR>
 
+"9 C，C++ 按F5编译运行
+map <F5> :call CompileRunGcc()<CR>
+func! CompileRunGcc()
+	exec "w"
+	if &filetype == 'c'
+		exec "!gcc % -o %<"
+		exec "!time ./%<"
+	elseif &filetype == 'cpp'
+		exec "!g++ % -o %<"
+		exec "!time ./%<"
+	elseif &filetype == 'java' 
+		exec "!javac %" 
+		exec "!time java %<"
+	elseif &filetype == 'sh'
+		:!time bash %
+	elseif &filetype == 'python'
+		exec "!time python2.7 %"
+    elseif &filetype == 'html'
+        exec "!firefox % &"
+    elseif &filetype == 'go'
+"        exec "!go build %<"
+        exec "!time go run %"
+    elseif &filetype == 'mkd'
+        exec "!~/.vim/markdown.pl % > %.html &"
+        exec "!firefox %.html &"
+	endif
+endfunc
+
+
+"10 C,C++的调试
+map <F8> :call Rungdb()<CR>
+func! Rungdb()
+	exec "w"
+    if &filetype == 'c'
+	    exec "!gcc % -g -o %<"
+	    exec "!gdb ./%<"
+	elseif &filetype == 'cpp'
+	    exec "!g++ % -g -o %<"
+	    exec "!gdb ./%<"
+    endif
+endfunc
