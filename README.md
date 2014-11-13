@@ -19,7 +19,7 @@ zerovim
 #二:运行install.sh脚本配置Macvim
 
 - 先安装一下ctags git 等工具
-- sudo port install ctags git node 或 brew install vim ctags git node
+- sudo port install ctags git gdb-apple node 或 brew install vim ctags git node gdb
 - chomd +x install.sh
 - ./install.sh
 - 打开vim并执行bundle程序`:BundleInstall`
