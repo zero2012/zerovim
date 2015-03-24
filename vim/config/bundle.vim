@@ -32,7 +32,7 @@ Bundle 'mattn/emmet-vim'
 Bundle 'vim-scripts/Syntastic'
 "txt文件高亮
 Bundle 'vim-scripts/txt.vim'
-" 弹框插件
+" 由于新版neocomplcache 不支持sudo gvim file,所以用老版neocomplcache并放在自己的github
 Bundle 'zero2012/neocomplcache'
 "go语言语法高亮
 Bundle 'zero2012/vim-gocode'
@@ -48,3 +48,9 @@ Bundle 'zero2012/snipMate'
 Bundle 'zero2012/php-doc.vim' 
 "代码美化
 Bundle 'zero2012/codebeautify'
+"文件搜索插件
+Bundle 'kien/ctrlp.vim'
+"自动更新文件修改时间
+Bundle 'vim-scripts/timestamp.vim'
+
+

@@ -47,10 +47,11 @@ let maplocalleader = "\\"
 let MRU_Window_Height = 10
 
 " 4.snipMate变量定义
-let g:my_snips_author  = "zero<512888425@qq.com> $"
+let g:my_snips_author  = "zero<512888425@qq.com>"
 let g:snips_mail    = "512888425@qq.com"
-let g:snips_company = "(C)2012-2022 www.kkk5.com Inc."
-let g:snips_top     = "[3kwan开发框架]"
+let g:snips_company = "(C)2012-2022 www.zerophp.cn Inc."
+let g:snips_top     = "[zero开发框架]"
+let g:my_version    = "1.0"
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -69,6 +70,7 @@ au FileType html,htm,smarty setlocal dict+=~/.vim/dict/javascript.dict
 au FileType javascript      setlocal dict+=~/.vim/dict/javascript.dict
 au FileType html,htm,smarty let g:javascript_enable_domhtmlcss = 1
 au Filetype java setlocal omnifunc=javacomplete#Complete
+"au FileType go   setlocal dict+=~/.vim/dict/go.dict
 " vim无法认出json，遇到json后缀的，告诉一下vim这个是json
 au BufRead,BufNewFile *.json set filetype=json
 "txt文件高亮
@@ -132,4 +134,15 @@ let g:syntastic_ignore_files=['.*\.tpl$', '.*\.html$','.*\.htm$','.*\.go']
 "18 静态分析器 syntastic 错误标识
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
+
+"19 timestamp.vim 自动更新文件最后一次修改时间
+"let timestamp_regexp = '\v\C%(<Last %([cC]hanged?|[Mm]odified):\s+)@<=.*$'
+"set modelines=20   
+"let g:timestamp_rep = '%m/%d/%Y %X'
+let timestamp_regexp = '\v\C%(<modified:\s+)@<=.*$'
+set modelines=20
+let g:timestamp_rep = '%Y-%m-%d %H:%M'
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 
