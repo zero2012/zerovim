@@ -22,7 +22,7 @@ set termencoding=utf-8              " 设置编码
 set fileencoding=utf-8
 set fileencodings=utf-8,chinese,latin1
 set helplang=cn						" 显示中文帮助
-set fileformats=unix                " 设置文件格式
+set fileformats=unix,dos            " 设置文件格式
 "set cc=100                          " 红线位置
 "set transparency=10                " 设置背景透明度
 set gfn=Monaco:h10 	                " 修改字体和大小                                                                  
@@ -161,12 +161,13 @@ endfunction
 " 把html文件当作xml文件来编辑，因为html按=号格式化有问题，而xml没问题
 au FileType smarty,html set ft=xml 
 au FileType smarty,html set syntax=html " 语法高亮还是用html自身的高亮
+" 如果第一行用得//注释，打完一行后，敲回车，换到第二行会自动的出现//符号。下面这行去除烦人的自动注释,
+au FileType * setl fo-=cro
 " xmledit
 let xml_use_xhtml = 1
-
-
 
 "引用插件配置
 source ~/.vim/config/plug.vim
 "引用快捷键配置
 source ~/.vim/config/keyboard.vim
+

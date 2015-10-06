@@ -8,15 +8,15 @@
 " 通过 ctrl+] 跳转到目标函数，通过 ctrl+o 或者 ctrl+t 跳回
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("cscope")
-       set csprg=cscope " /opt/local/bin/cscope
-       set csto=1
-       set cst
-       set nocsverb
-       " add any database in current directory
-       if filereadable("cscope.out")
-           cs add cscope.out
-       endif
-       set csverb
+    set csprg=cscope " /opt/local/bin/cscope
+    set csto=1
+    set cst
+    set nocsverb
+    " add any database in current directory
+    if filereadable("cscope.out")
+        cs add cscope.out
+    endif
+    set csverb
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -39,7 +39,7 @@ let g:indentLine_color_term = 239
 let g:indentLine_color_gui  = '#3F4039'
 " 如果要保证此插件能够使用必须在vimrc中添加set expandtab
 let g:indentLine_char       = '┆'  " 也可以不配置，indentLine.vim插件文件中有默认的
- 
+
 " 3.mru, 打开最近编辑过的文件
 " 定义一个用逗号来表示<Learder>
 let mapleader = "," 
@@ -47,11 +47,11 @@ let maplocalleader = "\\"
 let MRU_Window_Height = 10
 
 " 4.snipMate变量定义
-let g:my_snips_author  = "zero<512888425@qq.com>"
-let g:snips_mail    = "512888425@qq.com"
-let g:snips_company = "(C)2012-2022 www.zerophp.cn Inc."
-let g:snips_top     = "[zero开发框架]"
-let g:my_version    = "1.0"
+let g:my_snips_author = "zero<512888425@qq.com>"
+let g:snips_mail      = "512888425@qq.com"
+let g:snips_company   = "(C)2012-2022 www.zerophp.cn Inc."
+let g:snips_top       = "[zero开发框架]"
+let g:my_version      = "1.0"
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -83,6 +83,9 @@ autocmd BufNewFile *.html 0r ~/.vim/skeletons/tpl.skel
 autocmd BufNewFile *.tpl 0r ~/.vim/skeletons/tpl.skel
 autocmd BufNewFile *.json 0r ~/.vim/skeletons/json.skel
 autocmd BufNewFile *.java 0r ~/.vim/skeletons/java.skel
+
+
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -129,7 +132,7 @@ let g:neocomplcache_enable_auto_select = 1 "支持在下拉框自动选择第一
 " let g:neocomplcache_enable_caching_message=1 "显示启动进度
 
 " 17.跳过tpl，html 文件的语法检查，插件syntastic的配置
-let g:syntastic_ignore_files=['.*\.tpl$', '.*\.html$','.*\.htm$','.*\.go']
+let g:syntastic_ignore_files=['.*\.tpl$', '.*\.html$','.*\.htm$','.*\.go$','.*\.dwt$']
 
 "18 静态分析器 syntastic 错误标识
 let g:syntastic_error_symbol = '✗'
@@ -139,10 +142,69 @@ let g:syntastic_warning_symbol = '⚠'
 "let timestamp_regexp = '\v\C%(<Last %([cC]hanged?|[Mm]odified):\s+)@<=.*$'
 "set modelines=20   
 "let g:timestamp_rep = '%m/%d/%Y %X'
-let timestamp_regexp = '\v\C%(<modified:\s+)@<=.*$'
-set modelines=20
-let g:timestamp_rep = '%Y-%m-%d %H:%M'
+"let timestamp_regexp = '\v\C%(<modified:\s+)@<=.*$'
+"set modelines=20
+"let g:timestamp_rep = '%Y-%m-%d %H:%M'
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
+"20 优化大文件编辑
+let g:LargeFile=50
+
+"21 YouCompleteMe智能补全工具
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+" 不显示开启vim时检查ycm_extra_conf文件的信息
+let g:ycm_confirm_extra_conf = 0
+" 开启基于tag的补全，可以在这之后添加需要的标签路径
+let g:ycm_collect_identifiers_from_tags_files = 1
+" 开启语义补全
+let g:ycm_seed_identifiers_with_syntax = 1
+"注释和字符串中的文字也会被收入补全
+let g:ycm_collect_identifiers_from_comments_and_strings = 0
+" 输入第 2 个字符开始补全
+let g:ycm_min_num_of_chars_for_completion= 2
+" 禁止缓存匹配项,每次都重新生成匹配项
+let g:ycm_cache_omnifunc=0
+"在注释输入中也能补全
+let g:ycm_complete_in_comments = 1
+"在字符串输入中也能补全
+let g:ycm_complete_in_strings = 1
+"定义快捷健补全
+let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
+" 设置在下面几种格式的文件上屏蔽ycm
+let g:ycm_filetype_blacklist = {
+      \ 'tagbar' : 1,
+      \ 'qf' : 1,
+      \ 'notes' : 1,
+      \ 'markdown' : 1,
+      \ 'unite' : 1,
+      \ 'text' : 1,
+      \ 'vimwiki' : 1,
+      \ 'pandoc' : 1,
+      \ 'infolog' : 1,
+      \ 'mail' : 1
+      \}
+
+"设置关健字触发补全
+let g:ycm_semantic_triggers =  {
+  \   'c' : ['->', '.'],
+  \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
+  \             're!\[.*\]\s'],
+  \   'ocaml' : ['.', '#'],
+  \   'cpp,objcpp' : ['->', '.', '::'],
+  \   'perl' : ['->'],
+  \   'php' : ['->', '::'],
+  \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
+  \   'ruby' : ['.', '::'],
+  \   'lua' : ['.', ':'],
+  \   'erlang' : [':'],
+  \ }
+
+let g:ycm_cache_omnifunc = 1
+let g:ycm_use_ultisnips_completer = 1
+"定义函数跟踪快捷健
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
 

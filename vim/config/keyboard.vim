@@ -54,7 +54,8 @@ endfunction
 
 "3 EasyGrep 搜索插件
 "1 使用 Grep.vim 插件在工程内全局查找，设置快捷键。快捷键速记法：search in buffer
-nmap <Leader>vb :GrepBuffer -ir<CR><CR>
+"nmap <Leader>vb :GrepBuffer -ir<CR><CR>
+noremap <C-F> :GrepBuffer -ir<CR><CR>
 "2 Grep的词在光标下,匹配所有。  <Leader>vv
 "3 Grep的词在光标下,匹配整个单词。 <Leader>vV
 "4 跟vv一样，但添加在现有的列表。  <Leader>va 
@@ -81,6 +82,7 @@ map pr :call PhpDocRange()<CR>
 map <silent> ,fh :call RangeHtmlBeautify()<CR>
 map <silent> ,fj :call RangeJsBeautify()<CR>
 map <silent> ,fc :call RangeCSSBeautify()<CR>
+map <silent> ,fs :%!python -m json.tool<CR>
 
 
 " 7 窗体的移动
@@ -121,8 +123,11 @@ func! CompileRunGcc()
     elseif &filetype == 'html'
         exec "!firefox % &"
     elseif &filetype == 'go'
-"        exec "!go build %<"
+        "exec "!go build %<"
         exec "!time go run %"
+    elseif &filetype == 'php'
+        exec "!php  %<.php"
+        "exec "!time php %"
     elseif &filetype == 'mkd'
         exec "!~/.vim/markdown.pl % > %.html &"
         exec "!firefox %.html &"
@@ -136,9 +141,29 @@ func! Rungdb()
 	exec "w"
     if &filetype == 'c'
 	    exec "!gcc % -g -o %<"
-	    exec "!gdb ./%<"
+	    exec "!ggdb ./%<"
 	elseif &filetype == 'cpp'
 	    exec "!g++ % -g -o %<"
-	    exec "!gdb ./%<"
+	    exec "!ggdb ./%<"
     endif
 endfunc
+
+
+" ================================================================
+" 解决直接用vim打开的文件，从剪切板复制数据到vim中保留原有d的格式，
+" 不出现其他额外的东西, 
+" 也可以用粘贴之前：:set paste 粘贴之后：:set nopaste
+" 或者 :map <F10> :set paste<CR> :map <F11> :set nopaste<CR> 
+" pastetoggle其实就是set paste和set nopaste的互相切换
+" ================================================================
+set pastetoggle=<F10>
+
+"map <c-t> ^WgfToggle
+
+nmap <Leader>a= :Tabularize /=<CR>
+vmap <Leader>a= :Tabularize /=<CR>
+nmap <Leader>a: :Tabularize /:<CR>
+vmap <Leader>a: :Tabularize /:<CR>
+
+
+
